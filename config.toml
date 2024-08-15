@@ -11,14 +11,16 @@ default_language = "en"
 # theme = ""
 
 # Highlight all code blocks found
-highlight_code = true
+# Or enable the highlight.js in the 'extra' config section
+highlight_code = false
 
 # Which theme to use for the code highlighting.
 # See below for list of accepted values
 highlight_theme = "agola-dark"
 
 # Whether to generate a RSS feed automatically
-generate_rss = true
+generate_feed = true
+feed_filename = "rss.xml"
 
 # The number of articles to include in the RSS feed. Will include all items if
 # not set (the default).
@@ -35,15 +37,6 @@ generate_rss = true
 taxonomies = [
            {name = "tags", rss = true}
 ]
-
-# The additional languages for that site
-# Example:
-#     languages = [
-#       {code = "fr", rss = true}, # there will be a RSS feed for French content
-#       {code = "it"}, # there won't be a RSS feed for Italian content
-#     ]
-#
-languages = []
 
 # Whether to compile the Sass files found in the `sass` directory
 compile_sass = true
@@ -83,6 +76,25 @@ hermit_social = [
     { name = "github", link = "https://github.com" },
     { name = "email", link = "mailto:author@domain.com" }
 ]
+
+
+# You can use highlight.js for code highlighting if you dont like the 
+# default one
+[extra.highlightjs]
+enable = true
+clipboard = true
+theme = "railscasts"
+
+[extra.disqus]
+enable = false
+# Take this from your Disqus account
+shortname = "my-supa-dupa-blog"
+# Cpmments can be disabled per page by setting:
+# [extra]
+# disable_comments = true
+#
+# in the posts front-matter
+
 
 [extra.author]
 name = "The Author"

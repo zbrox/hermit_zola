@@ -6,7 +6,7 @@
 
 Hermit is a  minimal & fast Zola theme for bloggers.
 
-![screenshot](hermit_zola.png)
+![screenshot](screenshot.png)
 
 [View demo](https://versbinarii.gitlab.io/blog/)
 
@@ -43,6 +43,18 @@ hermit_social = [
     { name = "email", link = "mailto:author@domain.com" }
 ]
 
+
+
+[extra.highlightjs]
+enable = true
+clipboard = true
+theme = "vs2015"
+
+[extra.disqus]
+enable = false
+# Take this from your Disqus account
+shortname = "my-supa-dupa-blog"
+
 [extra.author]
 name = "The Author"
 email = "author@domain.com"
@@ -55,8 +67,10 @@ id = "UA-4XXXXXXX-X"
 ### Table of content
 Table of content can be enabled by adding 
 ```
++++
 [extra]
 toc=true
++++
 ```
 to the page front matter. Icon will then appear above the page title that will
 allow to toggle the ToC.
